@@ -30,13 +30,13 @@ different devices).
 2. `Ctrl + Alt + T` to get into a `crosh` shell.
 3. Type `shell`, and get a copy of crouton from [https://goo.gl/fd3zc](https://goo.gl/fd3zc) (note: clicking this link will download it to `~/Downloads`.
 4. Install the crouton binaries:  `sudo sh ~/Downloads/crouton -b`
-5. Plug in your Flash Drive / SD Card and restore:
-
-    sudo edit-chroot -f /media/removable/PYTN -r pytn
-
+5. Plug in your Flash Drive / SD Card and restore: `sudo edit-chroot -f /media/removable/PYTN -r pytn`
 6. Reboot the system so ChromeOS will update (this step is **important**)
 7. Log in as guest again, `Ctrl + Alt + T`, type `shell`, then type `sudo enter-chroot startxfce4`, then `cd ~/makinggames/ && python wormy.py`. You should see the game running.
-
+8. In ChromeOS (from the shell), create a simple executable to launch ubuntu:
+  - `sudo touch /usr/local/bin/ubuntu`
+  - `sudo chmod a+x /usr/local/bin/ubuntu`
+  - edit the above file and include: `sudo enter-chroot startxfce4`
 
 ---
 
