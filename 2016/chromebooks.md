@@ -7,13 +7,40 @@ Asus C300M
 3. Log in as guest
 
 
-## Enable Developer Mode
+## RESTORING A BACKUP
 
-1. Hit Esc + Refresh (F3) + Power
-2. Ctrl + D to bypass the warning, Turn off OS verification (presss Enter)
-3. Ctrl + D again... wait for it to boot into developer mode.
+If you've never set up crouton, skip to _GETTING STARTED FOR THE FIRST TIME_.
 
-## Setting up Crouton
+Follow these steps if you've got a crouton backup ready to install on multiple
+chromebooks (e.g. you've set up crouton and quickly want to get it running on
+different devices).
+
+### Enable Developer Mode
+
+1. Boot the device and connect to a network, set up the keyboard preferences,
+   and log in as Guest.
+2. Hit Esc + Refresh (F3) + Power
+3. Ctrl + D to bypass the warning, Turn off OS verification (presss Enter)
+4. Ctrl + D again... wait for it to boot into developer mode.
+
+
+### Install crouton and Restore a backup.
+
+1. Log in as Guest
+2. `Ctrl + Alt + T` to get into a `crosh` shell.
+3. Type `shell`, and get a copy of crouton from [https://goo.gl/fd3zc](https://goo.gl/fd3zc) (note: clicking this link will download it to `~/Downloads`.
+4. Install the crouton binaries:  `sudo sh ~/Downloads/crouton -b`
+5. Plug in your Flash Drive / SD Card and restore:
+
+    sudo edit-chroot -f /media/removable/PYTN -r pytn
+
+6. Reboot the system so ChromeOS will update (this step is **important**)
+7. Log in as guest again, `Ctrl + Alt + T`, type `shell`, then type `sudo enter-chroot startxfce4`, then `cd ~/makinggames/ && python wormy.py`. You should see the game running.
+
+
+---
+
+## GETTING STARTED FOR THE FIRST TIME
 
 1. Log in as Guest
 2. `Ctrl + Alt + T` to get into a `crosh` shell.
@@ -25,13 +52,13 @@ Asus C300M
 8. (optional) Set up passwordless sudo: `sudo su -`, then run `visudo`, ensure
    entries have something like:  `ALL ALL = (ALL) NOPASSWD: ALL`
 
-## System Tweaks
+### System Tweaks
 
 - Open Settings, Mouse and Touchpad, and disable _Tap touchpad to click_
 - Click _Diable touchpad while typing_
 
 
-## Installing stuff
+### Installing stuff
 
 The bulk of the packages we need can be installed with the following:
 
@@ -53,9 +80,12 @@ Install the _Invent with Python_ games:
 
 Note that this is a commercial version of minecraft, and you need an account to play.
 
+___
+
 ## Backups and Bootstrap files
 
-To build a bootstrap file (e.g. for setting up additional machines), run:
+To build a bootstrap file, run the following command. This is useful if you want
+to install without needing to download lots of stuff over and over.
 
     sudo sh crouton -d -f /media/removable/PYTN/pytn-1404-bootstrap.tar.bz2 -t xfce -r trusty
 
@@ -63,7 +93,9 @@ Then, to set up a new device using that bootstrap file:
 
     sudo sh crouton -f /media/removable/PYTN/pytn-1404-bootstrap.tar.bz2 -t xfce -r trusty
 
-Once you have a system configured, you can back up your chroot (eg to a USB drive) with:
+**Notice**: Once you have a system configured, you can back up your chroot
+(eg to a USB drive) with the following command, then you can restore it on
+multiple devices to get an image set up quickly.
 
     sudo edit-chroot -f /media/removable/PYTN -b pytn
 
@@ -79,6 +111,3 @@ The following are useful resources to have.
 - [crouton](https://github.com/dnschneid/crouton): Allows ubuntu to run in a chroot inside of ChromeOS
 - [the crouton command cheat sheet](https://github.com/dnschneid/crouton/wiki/Crouton-Command-Cheat-Sheet): Lots of examples so you can see what all crouton can do.
 - [Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line) at codecademy.com: Handy for anyone new to Linux.
-
-
-
