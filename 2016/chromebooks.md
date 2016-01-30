@@ -9,7 +9,7 @@ Asus C300M
 
 ## RESTORING A BACKUP
 
-If you've never set up crouton, skip to _GETTING STARTED FOR THE FIRST TIME_.
+If you've never set up crouton, skip to <a href="#getting-started-for-the-first-time">GETTING STARTED FOR THE FIRST TIME</a>.
 
 Follow these steps if you've got a crouton backup ready to install on multiple
 chromebooks (e.g. you've set up crouton and quickly want to get it running on
