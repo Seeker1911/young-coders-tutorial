@@ -1,6 +1,11 @@
 # Setting up the chromebooks
 
-Asus C300M
+This is a guide to setting up a Chromebook for use during the Young Coders
+class (for PyTennessee 2016). We used the Asus C300M, manually set up one
+laptop using crouton and installing all necessary packages in linux, then
+used crouton's backup tools to restore that laptop to all of the others.
+
+To get started:
 
 1. Charge the battery
 2. Turn on the laptop and go through keyboard/country selection, and enable/connect to wifi
@@ -57,7 +62,10 @@ If you get here and everything worked, you're good to go!
 ### System Tweaks
 
 - Open Settings, Mouse and Touchpad, and disable _Tap touchpad to click_
-- Click _Diable touchpad while typing_
+- Click _Disable touchpad while typing_
+- (Optional) Restrict xfce to only one workspace (during the class, several
+  students accidentally switched to a new workspace with the touchpad, which
+  was really confusing)
 
 
 ### Installing stuff
