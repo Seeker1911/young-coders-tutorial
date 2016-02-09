@@ -5,7 +5,16 @@ class (for PyTennessee 2016). We used the Asus C300M, manually set up one
 laptop using crouton and installing all necessary packages in linux, then
 used crouton's backup tools to restore that laptop to all of the others.
 
-To get started:
+
+## Resources / Notes:
+
+- You can download a [crouton bootstrap image, here](https://www.dropbox.com/s/2dgplm7i7dw8hg7/pytn-1404-bootstrap.tar.bz2?dl=0) (~73Mb). It essentially contains a basic Ubuntu Trusty (14.04) + Xfce.
+- You can get the [full backup image, here](https://www.dropbox.com/s/99tu8fcyuqphqiw/pytn-20160128-2121.tar.gz?dl=0) (~720Mb). It's Ubuntu Trusty, with all the
+  necessary packages and resources already installed. In the guide below, you can
+  use this to restore (quick and relatively easy). I saved this on several flash drives named `PYTN` (hence the path names in the guide below), and loaded it on multiple devices at once.
+
+
+## Get started
 
 1. Charge the battery
 2. Turn on the laptop and go through keyboard/country selection, and enable/connect to wifi
@@ -114,7 +123,7 @@ Restore from a backup:
     sudo edit-chroot -f /media/removable/PYTN -r pytn
 
 
-## Handy Resources
+## More Handy Resources
 
 The following are useful resources to have.
 
