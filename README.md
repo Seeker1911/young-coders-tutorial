@@ -1,6 +1,18 @@
 Young Coder class materials
 =====================
 
+
+**PyTennessee!**: Note that the main branch on this repo is `pytn`. Check out
+the `2017` directory for the most recent materials, including:
+
+- [Slides](2017/YounCoders_2017_EN.key)
+- [Instructuctions for setting up Chromebooks](2017/chromebooks.md)
+
+(the rest of this readme is from the orignal)
+
+
+----
+
 Slides and resources from the Young Coder tutorials at PyCon 2013
 
 https://us.pycon.org/2013/events/letslearnpython/
