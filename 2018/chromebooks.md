@@ -1,7 +1,7 @@
 # Setting up the chromebooks
 
 This is a guide to setting up a Chromebook for use during the Young Coders
-class (for PyTennessee 2017). We used the
+class (for PyTennessee 2018). We used the
 [HP Chromebook 11 G5](http://www8.hp.com/us/en/products/laptops/product-detail.html?oid=10477089),
 manually set up one laptop using crouton and installing all necessary packages
 in linux, then used crouton's backup tools to restore that laptop to all of the
@@ -11,8 +11,8 @@ others.
 
 ## Resources / Notes:
 
-You can download the [full PyTN Ubuntu backup image, here](https://www.dropbox.com/s/hf29q914hicllv3/pytn-20170129-1246.tar.gz?dl=0)
-(approximagely 1.56Gb). It's Ubuntu Trusty, with all the necessary packages and
+You can download the [full PyTN Ubuntu backup image, here](https://www.dropbox.com/s/nux1zfmsr6lsf5x/pytn-20180113-1600.tar.gz?dl=0)
+(approximagely 1.56Gb). It's Ubuntu 16.04 (Xenial), with all the necessary packages and
 resources already installed. In the [Restoring a backup](#restoring-a-backup)
 guide below, you can use this to restore (quick and relatively easy). I saved
 this on several flash drives named `PYTN` (hence the path names in the guide
@@ -77,7 +77,7 @@ First, enable developer mode (see instructions above). Now, we can set up Crouto
 1. Log in as Guest.
 2. `Ctrl + Alt + T` to get into a `crosh` shell.
 3. Type `shell`, and get a copy of crouton from [https://goo.gl/fd3zc](https://goo.gl/fd3zc) (note: clicking this link will download it to `~/Downloads`.
-4. Run `sudo sh ~/Downloads/crouton -r trusty -t xfce -n pytn` (you can also
+4. Run `sudo sh ~/Downloads/crouton -r xenial -t xfce -n pytn` (you can also
    specify `-r xenial` to ensure you get 16.04, but that's the default)
 5. Set username/password both to `pytn`
 6. Once finished, run `sudo startxfce4` to start XFCE.
@@ -161,9 +161,9 @@ Prior to setting up the chroot
 - `sh crouton -r list` -- List available linux releases.
 - `sh crouton -t help` -- help w/ targets (flavors of desktop, etc)
 - `sudo sh crouton -t xfce` -- Create a Precise 12.04 with XFCE
-- `sudo sh crouton -t xfce -r trusty -n pytn` -- Create a named chroot
-- `sudo sh crouton -d -f pytn.tar.bz2 -t xfce -r trusty` -- Create a bootstrap file
-- `sudo sh crouton -f pytn.tar.bz2 -t xfce -r trusty` -- Create a chroot from a bootstrap file
+- `sudo sh crouton -t xfce -r xenial -n pytn` -- Create a named chroot
+- `sudo sh crouton -d -f pytn.tar.bz2 -t xfce -r xenial` -- Create a bootstrap file
+- `sudo sh crouton -f pytn.tar.bz2 -t xfce -r xenial` -- Create a chroot from a bootstrap file
 - `sudo delete-chroot precise` -- Removes an install chroot named "precise"
 - `sudo sh crouton -n precise -u` -- Upgrade your chroot
 - `sudo edit-chroot -f /media/removable/PYTN -b pytn` -- Make a BACKUP
