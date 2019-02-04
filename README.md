@@ -3,10 +3,10 @@ Young Coder class materials
 
 
 **PyTennessee!**: Note that the main branch on this repo is `pytn`. Check out
-the `2017` directory for the most recent materials, including:
+the `2019` directory for the most recent materials, including:
 
 - Slides
-- Instructions for setting up Chromebooks
+- Additional Resources
 
 (the rest of this readme is from the orignal)
 
