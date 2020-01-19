@@ -81,4 +81,4 @@ Video
 
 At PyCon 2014, Katie Cunningham and I did a talk that elaborates on many of these points and gives some additional information that may help you to plan your own Young Coders class:
 
-"The Young Coder: Let's Learn Python" on PyVideo: http://pyvideo.org/video/2570/the-young-coder-lets-learn-python
+"The Young Coder: Let's Learn Python" on Youtube: https://www.youtube.com/watch?v=HgpsmOpZfD4&feature=emb_err_watch_on_yt
