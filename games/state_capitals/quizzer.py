@@ -23,14 +23,15 @@ def playthegame(flashcards):
     question = x[0]
     answer = x[1]
 
-    y = raw_input('%s: ' % (question) )
+    y = input('%s: ' % (question) )
     if y.lower() == 'exit':
       sys.exit()
     elif y.lower() == answer.lower():
-      print "Correct!"
+      print("Correct!")
       flashcards.remove(x)
     else:
-      print "That is not correct, the answer is %s." % (answer)
+      print("That is not correct, the answer is %s." % (answer))
+
 
 if __name__ == '__main__':
   quizfile = getquizfile()
